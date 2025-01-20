@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useRef } from "react";
 import HeroSection from "../components/HeroSection";
 
 import SubNavbar from "../components/SubNavbar";
@@ -14,18 +14,38 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import AboutSection from "../components/AboutSection";
 
 export default function Home() {
+  const heroRef = useRef(null);
+  const servicesRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Scroll function
+  const scrollToSection = (sectionRef) => {
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <SubNavbar />
-      <HeroSection />
+      <div ref={heroRef}>
+        <HeroSection
+          scrollToSection={scrollToSection}
+          refs={{ heroRef, servicesRef, aboutRef, contactRef }}
+        />
+      </div>
       <MovingLogos />
-      <Services />
-
+      <div ref={servicesRef}>
+        <Services />
+      </div>
       <MovingText />
-      <AboutSection />
+      <div ref={aboutRef}>
+        <AboutSection />
+      </div>
       <WhyChooseUs />
       <TeamSection />
-      <ContactSection />
+      <div ref={contactRef}>
+        <ContactSection />
+      </div>
       <BlogSection />
       <Footer />
     </>

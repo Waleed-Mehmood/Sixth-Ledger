@@ -8,8 +8,10 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const HeroSection = () => {
+const HeroSection = ({ scrollToSection, refs }) => {
+  const { heroRef, servicesRef, aboutRef, contactRef } = refs;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -25,18 +27,19 @@ const HeroSection = () => {
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center space-x-6">
-            <a href="#home" className="text-white hover:text-orange-600">
+            <Link  onClick={() => scrollToSection(heroRef)} className="text-white hover:text-orange-600">
               Home
-            </a>
-            <a href="#about" className="text-white hover:text-orange-600">
+            </Link>
+            <Link  className="text-white hover:text-orange-600" onClick={() => scrollToSection(servicesRef)}>
+              Services
+            </Link>
+            <Link className="text-white hover:text-orange-600" onClick={() => scrollToSection(aboutRef)}>
               About
-            </a>
-            <a href="#contact" className="text-white hover:text-orange-600">
+            </Link>
+            <Link onClick={() => scrollToSection(contactRef)} className="text-white hover:text-orange-600">
               Contact
-            </a>
-            <a href="#more" className="text-white hover:text-orange-600">
-              More
-            </a>
+            </Link>
+          
           </div>
 
           {/* Search and Hamburger Menu */}
