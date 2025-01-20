@@ -15,8 +15,10 @@ const HeroSection = () => {
   return (
     <div className="font-sans">
       {/* Navbar */}
+
       <nav className="fixed top-0 left-0 w-full bg-[#202427] bg-opacity-90 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+
           {/* Logo */}
           <div className="text-orange-600 font-bold text-xl">
             <img src={logo} alt="logo" className="w-44 h-auto" />
