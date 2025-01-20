@@ -80,7 +80,7 @@ const ContactSection = () => {
           </div>
 
           {/* Girl Image */}
-          <div className="mt-6 lg:mt-0 absolute bottom-0 right-0 lg:ml-6 w-full lg:w-1/3">
+          <div className="mt-6 lg:mt-0 absolute bottom-0 right-0 lg:ml-6 w-1/3 ">
             <img
               src={girlImage}
               alt="Customer Support Girl"

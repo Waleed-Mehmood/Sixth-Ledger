@@ -9,12 +9,13 @@ const services = [
   { icon: <FaCogs size={30} />, title: 'Accounting And Bookkeeping', description: 'We provide tailored solutions that meet your business needs.', image: service1 },
   { icon: <FaLaptopCode size={30} />, title: 'Marketing And Advertising', description: 'Our web development services include building scalable and responsive websites.', image: service2 },
   { icon: <FaRegLightbulb size={30} />, title: 'IT Support And Consulting', description: 'We help businesses identify opportunities for innovation and growth.', image: service3 },
-  { icon: <FaUsers size={30} />, title: 'Human Resource', description: 'We foster strong collaboration between teams to achieve better outcomes.', image: service4 }
+  { icon: <FaUsers size={30} />, title: 'Human Resource', description: 'We foster strong collaboration between teams to achieve better outcomes.', image: service4 },
+  { icon: <FaUsers size={30} />, title: 'Tax Computation', description: 'We foster strong collaboration between teams to achieve better outcomes.', image: "https://profit.pakistantoday.com.pk/wp-content/uploads/2021/03/44968867_m.jpg" }
 ];
 
 const Services = () => {
   return (
-    <div className="container mx-auto my-16 px-4">
+    <div className="container mx-auto my-16 px-4 md:px-20">
       {/* Header Text */}
       <div className="text-left mb-2">
         <h5 className="text-xl text-[#AF5923] font-medium">Our Service List</h5>
@@ -34,7 +35,7 @@ const Services = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {services.map((service, index) => (
           <div
             key={index}

@@ -2,7 +2,7 @@ import React from "react";
 
 const SubNavbar = () => {
   return (
-    <div className="bg-black text-white py-6 px-24 text-sm">
+    <div className="bg-black text-white py-6 px-16 text-sm">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-screen-xl mx-auto">
         {/* Left Section */}
         <div className="flex flex-wrap justify-center md:justify-start items-center space-x-2">

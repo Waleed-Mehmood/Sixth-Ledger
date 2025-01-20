@@ -16,9 +16,8 @@ const HeroSection = () => {
     <div className="font-sans">
       {/* Navbar */}
 
-      <nav className="fixed top-0 left-0 w-full bg-[#202427] bg-opacity-90 z-50">
+      <nav className="  left-0 w-full bg-[#202427]  z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-
           {/* Logo */}
           <div className="text-orange-600 font-bold text-xl">
             <img src={logo} alt="logo" className="w-44 h-auto" />
@@ -59,7 +58,7 @@ const HeroSection = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-gray-800 bg-opacity-90 py-4 px-6">
+          <div className="lg:hidden bg-[#202427] bg-opacity-90 py-4 px-6">
             <a
               href="#home"
               className="block text-white hover:text-orange-600 py-2 "

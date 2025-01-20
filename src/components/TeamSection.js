@@ -29,7 +29,7 @@ const TeamSection = () => {
         <h3 className="text-3xl font-bold text-gray-800 mt-2 ">
           Meet Our Team of Professional team behind the success
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 px-32 mt-14">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
