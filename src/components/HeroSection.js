@@ -27,19 +27,30 @@ const HeroSection = ({ scrollToSection, refs }) => {
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Link  onClick={() => scrollToSection(heroRef)} className="text-white hover:text-orange-600">
+            <Link
+              onClick={() => scrollToSection(heroRef)}
+              className="text-white hover:text-orange-600"
+            >
               Home
             </Link>
-            <Link  className="text-white hover:text-orange-600" onClick={() => scrollToSection(servicesRef)}>
+            <Link
+              className="text-white hover:text-orange-600"
+              onClick={() => scrollToSection(servicesRef)}
+            >
               Services
             </Link>
-            <Link className="text-white hover:text-orange-600" onClick={() => scrollToSection(aboutRef)}>
+            <Link
+              className="text-white hover:text-orange-600"
+              onClick={() => scrollToSection(aboutRef)}
+            >
               About
             </Link>
-            <Link onClick={() => scrollToSection(contactRef)} className="text-white hover:text-orange-600">
+            <Link
+              onClick={() => scrollToSection(contactRef)}
+              className="text-white hover:text-orange-600"
+            >
               Contact
             </Link>
-          
           </div>
 
           {/* Search and Hamburger Menu */}
@@ -127,18 +138,19 @@ const HeroSection = ({ scrollToSection, refs }) => {
         {/* Hero Content */}
         <div className="container mx-auto flex flex-col justify-center items-start h-full relative z-10 px-6 sm:px-10 lg:px-24">
           <p className="text-orange-600 text-md mb-2 pt-6">
-            This Week Only For World Premier
+          Welcome to Sixth Ledger
           </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4">
-            Inventive and <span className="text-orange-600">interested</span>
-            <br /> in innovation
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mb-4">
+          Seamless Bookkeeping,<br /> Stress-Free Payroll<br />
+           <span className="text-orange-600">We handle the numbers, </span>
+            <br /> you handle the business
           </h1>
           <p className="text-white text-sm sm:text-lg mb-6 max-w-lg">
             SFR is a highly fragmented asset class. It's easy to lose your way
             amidst billions of data points.
           </p>
           <button className="bg-orange-600 hover:bg-orange-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg">
-            Get Started
+          Book a Free Consultation
           </button>
           <div className="md:hidden flex space-x-4 z-10 w-full justify-center align-items-center mt-4">
             <a
