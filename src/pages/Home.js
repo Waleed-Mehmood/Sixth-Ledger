@@ -12,6 +12,7 @@ import ContactSection from "../components/ContactSection";
 import TeamSection from "../components/TeamSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import AboutSection from "../components/AboutSection";
+import OurProcess from "../components/OurProcess";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -42,6 +43,7 @@ export default function Home() {
         <AboutSection />
       </div>
       <WhyChooseUs />
+      <OurProcess/>
       <TeamSection />
       <div ref={contactRef}>
         <ContactSection />

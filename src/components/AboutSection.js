@@ -39,13 +39,17 @@ const AboutSection = () => {
         >
           <h3 className="text-orange-600 text-lg font-semibold">About us</h3>
           <h2 className="text-4xl font-bold mt-2 leading-tight">
-            Get Ready for Success with{" "}
-            <span className="text-orange-600">Sixth Ledger</span> Your Path to Growth.
+          Simplifying{" "}
+            <span className="text-orange-600">Financial Management</span> for Growth
           </h2>
           <p className="text-gray-600 mt-4">
-            We believe that growth is not a destination, but a continuous process. With
-            our expertise, experience, and tailored solutions, we help you unlock new
-            opportunities, overcome challenges, and achieve your ambitions.
+          At Sixth Ledger, we combine expertise and advanced tools like <strong>QuickBooks and Xero</strong> to deliver <strong>comprehensive financial services.</strong> From <strong>accurate bookkeeping and custom Excel solutions</strong> to <strong>efficient payroll management,</strong> our team ensures every aspect of your business’s financial needs is handled with precision.
+          </p>
+          <p className="text-gray-600 mt-4">
+          With professional services like <strong>budgeting and forecasting, year-end financial statements, and strategic competitor analysis,</strong> we empower startups and established enterprises alike to thrive in a competitive market.
+          </p>
+          <p className="text-gray-600 mt-4">
+          Led by a team of experienced ACCA Affiliates in Pakistan, we prioritize accuracy, compliance, and efficiency. Partner with us for tailored financial solutions, ensuring clarity and success every step of the way.
           </p>
           <div className="mt-6">
             <div className="flex justify-between items-center mb-2">
