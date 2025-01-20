@@ -5,18 +5,18 @@ import team2 from "../assets/team2.png";
 import team3 from "../assets/team3.png";
 const teamMembers = [
   {
-    name: "Team Member 1",
-    role: "Role 1",
+    name: "Hamza Sadaqat",
+    role: "ACCA Affiliate",
     image: team1,
   },
   {
-    name: "Team Member 2",
-    role: "Role 2",
+    name: "Shayan Ahmed Shujaat",
+    role: "ACCA Affiliate",
     image: team2,
   },
   {
-    name: "Team Member 3",
-    role: "Role 3",
+    name: "Amaz Liaqat Mughal",
+    role: "Legal Advisor LLB UOL",
     image: team3,
   },
 ];
@@ -42,6 +42,9 @@ const TeamSection = () => {
               <h4 className="text-xl font-semibold text-gray-800 mt-4">
                 {member.name}
               </h4>
+              <h5 className="text-md font-semibold text-gray-800 mt-4">
+                {member.role}
+              </h5>
             </div>
           ))}
         </div>

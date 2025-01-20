@@ -22,10 +22,8 @@ const Footer = () => {
           </div>
 
           <p className="text-sm mb-4 w-full">
-            We believe that growth is not a destination, but a continuous
-            process. With our expertise, experience, and tailored solutions, we
-            help you unlock new opportunities, overcome challenges, and achieve
-            your ambitions.
+          Simplifying Finance, Empowering Growth.
+          Trusted bookkeeping and payroll solutions tailored to your success.
           </p>
 
           <div className="flex justify-center md:justify-start space-x-4">
@@ -115,7 +113,7 @@ const Footer = () => {
 
       {/* Footer Copyright */}
       <div className="text-center mt-8 text-sm">
-        <p>Copyright &copy; 2025 Sixth Ledger. All Reserved</p>
+        <p>© 2025 Sixth Ledger.</p>
       </div>
     </footer>
   );
