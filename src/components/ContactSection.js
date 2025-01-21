@@ -130,7 +130,7 @@ const ContactSection = () => {
               {responseMessage && (
                 <p className="text-green-400">{responseMessage}</p>
               )}
-              {responseError && <p className="text-red-400">{responseError}</p>}
+              {responseError && <p className="text-red-400">{responseError?.message}</p>}
               <button
                 className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
                 disabled={loading}
