@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import presentation from '../assets/present.png';
+import presentation from "../assets/present.png";
 
 const WhyChooseUs = () => {
   const cardData = [
-    { title: "Digital agency services", icon: "🌐" },
-    { title: "Creative digital agency", icon: "🎨" },
-    { title: "Creating a user-friendly design", icon: "👥" },
-    { title: "Expert developers", icon: "💻" },
+    { title: "Bookkeeping", icon: "📑" },
+    { title: "Payroll Management", icon: "💳" },
+    { title: "Internal Audit and Control Test", icon: "🛂" },
+    { title: "Tax Computation", icon: "💻" },
   ];
 
   return (
@@ -20,15 +20,19 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.7 }}
           className="lg:w-1/2"
         >
-          <h3 className="text-orange-500 text-lg font-semibold">Why choose Us</h3>
+          <h3 className="text-orange-500 text-lg font-semibold">
+            Why choose Us
+          </h3>
           <h2 className="text-4xl font-bold mt-4 leading-snug">
-            Developing a design that is{" "}
-            <span className="text-orange-500">easy</span> to use and navigate
+            Why Partner With Us? Empowering Your{" "}
+            <span className="text-orange-500">Business</span> Through Reliable
+            Financial Solutions
           </h2>
           <p className="text-gray-400 mt-4">
-            We believe that growth is not a destination, but a continuous process.
-            With our expertise, experience, and tailored solutions, we help you unlock
-            new opportunities, overcome challenges, and achieve your ambitions.
+            We provide expert financial solutions tailored to your needs,
+            including accurate bookkeeping, seamless payroll management,
+            thorough audits, and precise tax computations. Simplify your
+            finances and focus on growth with our trusted support.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
             {cardData.map((item, index) => (

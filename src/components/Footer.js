@@ -4,9 +4,19 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaBehanceSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
-
-const Footer = () => {
+const Footer = ({ scrollToSection, refs }) => {
+  const {
+    heroRef,
+    servicesRef,
+    blogRef,
+    teamRef,
+    aboutRef,
+    contactRef,
+    faqsRef,
+    processRef,
+  } = refs;
   return (
     <footer className="bg-black text-white py-16 px-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -22,22 +32,26 @@ const Footer = () => {
           </div>
 
           <p className="text-sm mb-4 w-full">
-          Simplifying Finance, Empowering Growth.
-          Trusted bookkeeping and payroll solutions tailored to your success.
+            Simplifying Finance, Empowering Growth. Trusted bookkeeping and
+            payroll solutions tailored to your success.
           </p>
 
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#" className="hover:text-gray-400">
+            <a target="_blank"
+            href="https://www.facebook.com/profile.php?id=61570853965584" className="hover:text-gray-400">
               <FaFacebook />
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/sixthledger/"
+              className="hover:text-gray-400"
+            >
               <FaLinkedin />
             </a>
-            <a href="#" className="hover:text-gray-400">
-              <FaBehanceSquare />
-            </a>
-            <a href="#" className="hover:text-gray-400">
-            <FaSquareInstagram />
+           
+            <a target="_blank"
+            href="https://www.instagram.com/sixthledger/" className="hover:text-gray-400">
+              <FaSquareInstagram />
             </a>
           </div>
         </div>
@@ -47,24 +61,36 @@ const Footer = () => {
           <h3 className="font-semibold text-lg mb-4">Explore</h3>
           <ul>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
+              <Link
+                onClick={() => scrollToSection(heroRef)}
+                className="block text-sm hover:text-gray-400"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(servicesRef)}
+              >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
-                Portfolio
-              </a>
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(processRef)}
+              >
+                Process
+              </Link>
             </li>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(blogRef)}
+              >
                 Blog
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -72,24 +98,36 @@ const Footer = () => {
           <h3 className="font-semibold text-lg mb-4">Contact</h3>
           <ul>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(teamRef)}
+              >
                 Team
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(aboutRef)}
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
-                Team
-              </a>
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(faqsRef)}
+              >
+                FAQ's
+              </Link>
             </li>
             <li>
-              <a href="#" className="block text-sm hover:text-gray-400">
-                Privacy Policy
-              </a>
+              <Link
+                className="block text-sm hover:text-gray-400"
+                onClick={() => scrollToSection(contactRef)}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

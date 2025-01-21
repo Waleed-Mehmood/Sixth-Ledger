@@ -13,12 +13,17 @@ import TeamSection from "../components/TeamSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import AboutSection from "../components/AboutSection";
 import OurProcess from "../components/OurProcess";
+import FAQsSection from "../components/FAQsSection";
 
 export default function Home() {
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  const blogRef = useRef(null);
+  const teamRef = useRef(null);
+  const faqsRef = useRef(null);
+  const processRef = useRef(null);
 
   // Scroll function
   const scrollToSection = (sectionRef) => {
@@ -27,11 +32,14 @@ export default function Home() {
 
   return (
     <>
-      <SubNavbar />
+      <SubNavbar
+        scrollToSection={scrollToSection}
+        refs={{ contactRef, faqsRef }}
+      />
       <div ref={heroRef}>
         <HeroSection
           scrollToSection={scrollToSection}
-          refs={{ heroRef, servicesRef, aboutRef, contactRef }}
+          refs={{ heroRef, servicesRef, aboutRef, contactRef, teamRef }}
         />
       </div>
       <MovingLogos />
@@ -43,13 +51,34 @@ export default function Home() {
         <AboutSection />
       </div>
       <WhyChooseUs />
-      <OurProcess/>
-      <TeamSection />
+      <div ref={processRef}>
+        <OurProcess />
+      </div>
+      <div ref={teamRef}>
+        <TeamSection />
+      </div>
       <div ref={contactRef}>
         <ContactSection />
       </div>
-      <BlogSection />
-      <Footer />
+      <div ref={faqsRef}>
+        <FAQsSection />
+      </div>
+      <div ref={blogRef}>
+        <BlogSection />
+      </div>
+      <Footer
+        scrollToSection={scrollToSection}
+        refs={{
+          heroRef,
+          servicesRef,
+          aboutRef,
+          contactRef,
+          blogRef,
+          teamRef,
+          faqsRef,
+          processRef
+        }}
+      />
     </>
   );
 }
