@@ -38,9 +38,9 @@ const AboutSection = () => {
           transition={{ duration: 0.7 }}
         >
           <h3 className="text-orange-600 text-lg font-semibold">About us</h3>
-          <h2 className="text-4xl font-bold mt-2 leading-tight">
-          Simplifying{" "}
-            <span className="text-orange-600">Financial Management</span> for Growth
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 leading-tight">
+          Simplifying Financial{" "}
+            <span className="text-orange-600">Management</span> for Growth
           </h2>
           <p className="text-gray-600 mt-4">
           At Sixth Ledger, we combine expertise and advanced tools like <strong>QuickBooks and Xero</strong> to deliver <strong>comprehensive financial services.</strong> From <strong>accurate bookkeeping and custom Excel solutions</strong> to <strong>efficient payroll management,</strong> our team ensures every aspect of your business’s financial needs is handled with precision.

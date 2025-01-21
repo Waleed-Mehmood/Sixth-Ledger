@@ -10,7 +10,7 @@ const MovingLogos = () => {
   return (
     <div className="overflow-hidden bg-[#202427] p-animated">
       <div className="flex animate-marquee whitespace-nowrap space-x-8 sm:space-x-12 md:space-x-16 lg:space-x-20">
-        {Array(2) // Duplicate the list twice for seamless looping
+        {Array(10) // Duplicate the list twice for seamless looping
           .fill([
             logo1,
             logo2,
