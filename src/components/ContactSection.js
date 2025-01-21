@@ -24,7 +24,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold">Have Any Question?</p>
-                <p className="text-gray-400">+92 333 2336 927</p>
+                <p className="text-gray-400">+92 347 5105144</p>
               </div>
             </div>
 
@@ -34,7 +34,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold">Send Email</p>
-                <p className="text-gray-400">abcd@gmail.com</p>
+                <p className="text-gray-400">info@sixthledger.com</p>
               </div>
             </div>
 
@@ -44,7 +44,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold">Address</p>
-                <p className="text-gray-400">Islamabad</p>
+                <p className="text-gray-400">DHA 2,Islamabad</p>
               </div>
             </div>
           </div>
