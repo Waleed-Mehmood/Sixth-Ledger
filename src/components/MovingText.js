@@ -7,10 +7,10 @@ const MovingText = () => {
       <div className="flex animate-marquee whitespace-nowrap space-x-8 sm:space-x-12 md:space-x-16 lg:space-x-20 text-white text-1xl sm:text-2xl md:text-3xl font-semibold">
         {Array(10) // Duplicate the text list for seamless looping
           .fill([
-            "Accounting And Bookkeeping",
-            "Marketing And Advertising",
-            "IT Support And Consulting",
-            "Human Resource",
+            "Bookkeeping",
+            "Payroll Management",
+            "Internal Audit and Control Test",
+            "Tax Computation",
           ])
           .flat()
           .map((text, index) => (

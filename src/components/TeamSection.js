@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import team1 from "../assets/team1.png";
-import team2 from "../assets/team2-1.png";
-import team3 from "../assets/team3.png";
+import team2 from "../assets/team2.png";
+import team3 from "../assets/team3.jpeg";
 
 const teamMembers = [
   {
@@ -16,8 +16,8 @@ const teamMembers = [
     image: team2,
   },
   {
-    name: "Amaz Liaqat Mughal",
-    role: "Legal Advisor LLB UOL",
+    name: "Amaz Liaquat khan",
+    role: "Attorney at Law University of London",
     image: team3,
   },
 ];

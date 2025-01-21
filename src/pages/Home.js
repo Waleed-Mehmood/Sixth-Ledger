@@ -46,10 +46,11 @@ export default function Home() {
       <div ref={servicesRef}>
         <Services />
       </div>
-      <MovingText />
+      
       <div ref={aboutRef}>
         <AboutSection />
       </div>
+      <MovingText />
       <WhyChooseUs />
       <div ref={processRef}>
         <OurProcess />
@@ -76,7 +77,7 @@ export default function Home() {
           blogRef,
           teamRef,
           faqsRef,
-          processRef
+          processRef,
         }}
       />
     </>

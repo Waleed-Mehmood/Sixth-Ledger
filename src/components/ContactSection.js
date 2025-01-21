@@ -1,11 +1,49 @@
-import React from "react";
+import {React, useState} from "react";
 import girlImage from "../assets/image 25.png";
 import { MdOutlineShareLocation } from "react-icons/md";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
-
+import axios from "axios";
 
 const ContactSection = () => {
+
+  const [formData, setformData] = useState({
+    name:"",
+    email: "",
+    message: ""
+  })
+  const [responseMessage, setResponseMessage] = useState("");
+  const [responseError, setResponseError] = useState(null);
+
+  const handleInput = (e)=>{
+    const {name , value} = e.target;
+    setformData((prevData)=>({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit =async  (e)=>{
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:5000/contact", formData);
+      const message = response?.message;
+      setResponseMessage(message);
+      setformData({
+        name: "",
+        email: "",
+        message: ""
+      })
+    } catch (err) {
+      console.log(err)
+      setResponseError(err);
+    } 
+
+   
+  }
+
+  
+  console.log("form data", formData);
   return (
     <section className="bg-[#212327] text-white py-12 px-4">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -20,7 +58,7 @@ const ContactSection = () => {
           <div className="space-y-6">
             <div className="flex items-center">
               <div className="bg-orange-500 p-4 rounded-full mr-4">
-              <IoCall className="text-xl" />
+                <IoCall className="text-xl" />
               </div>
               <div>
                 <p className="font-semibold">Have Any Question?</p>
@@ -57,22 +95,34 @@ const ContactSection = () => {
             <h2 className="text-2xl font-bold text-center mb-6 text-black">
               Contact Us
             </h2>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <input
                 type="text"
+                name="name"
+                required
+                onChange={handleInput}
                 placeholder="Your Name"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-orange-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-orange-500 text-black"
               />
               <input
                 type="email"
+                name="email"
+                required
+                onChange={handleInput}
                 placeholder="Your Email"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-orange-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-orange-500 text-black"
               />
               <textarea
                 placeholder="Message here..."
                 rows="5"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-orange-500"
+                required
+                name="message"
+                onChange={handleInput}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-orange-500 text-black"
               ></textarea>
+
+              {responseMessage && (<p className="text-green-400">{responseMessage}</p>)}
+              {responseError && (<p className="text-red-400">{responseError}</p>)}
               <button className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition">
                 Contact
               </button>

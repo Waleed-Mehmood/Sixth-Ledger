@@ -37,8 +37,11 @@ const Footer = ({ scrollToSection, refs }) => {
           </p>
 
           <div className="flex justify-center md:justify-start space-x-4">
-            <a target="_blank"
-            href="https://www.facebook.com/profile.php?id=61570853965584" className="hover:text-gray-400">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=61570853965584"
+              className="hover:text-gray-400"
+            >
               <FaFacebook />
             </a>
             <a
@@ -48,9 +51,12 @@ const Footer = ({ scrollToSection, refs }) => {
             >
               <FaLinkedin />
             </a>
-           
-            <a target="_blank"
-            href="https://www.instagram.com/sixthledger/" className="hover:text-gray-400">
+
+            <a
+              target="_blank"
+              href="https://www.instagram.com/sixthledger/"
+              className="hover:text-gray-400"
+            >
               <FaSquareInstagram />
             </a>
           </div>
@@ -135,9 +141,7 @@ const Footer = ({ scrollToSection, refs }) => {
         {/* Newsletter Section */}
         <div className="text-center md:text-left mt-8 md:mt-0">
           <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
-          <p className="text-sm mb-4">
-            Lorem Ipsum is simply dummy text of the printing
-          </p>
+          <p className="text-sm mb-4">Stay Informed, Stay Ahead</p>
           <input
             type="email"
             placeholder="Enter your email"
